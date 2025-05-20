@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}Problem Statement{% endblock %}
+
+{% block content %}
+<section class="section bg-gradient-to-br from-red-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-red-600 font-semibold">The Challenge</span>
+            <h1 class="text-4xl font-bold mt-2 mb-6">Healthcare Challenges in India</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Despite progress, India's healthcare system faces inefficiencies that hinder care delivery for ~1.46 billion citizens, with public health spending at only 1.6-1.8% of GDP.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-folder-open text-red-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Limited Record Access</h3>
+                <p class="text-gray-600">
+                    About 60% of healthcare facilities rely on paper records, and while the Ayushman Bharat Digital Mission enables digital access, only ~30% of private facilities are integrated, creating information gaps.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-robot text-orange-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Limited AI Support</h3>
+                <p class="text-gray-600">
+                    AI tools for reading or summarizing lab tests and reports are used in only 10-15% of hospitals, mostly urban private ones, leading to inefficient data processing.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-clock text-yellow-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Time-Consuming Reviews</h3>
+                <p class="text-gray-600">
+                    Manual record reviews consume 20-30% of consultation time when patients return after weeks, reducing time for patient care.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-user-md text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Limited Decision Support</h3>
+                <p class="text-gray-600">
+                    Junior doctors lack access to Clinical Decision Support Systems, though pilots via Ayushman Bharat Digital Mission are underway, risking inconsistent diagnoses.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-file-medical-alt text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Manual Report Analysis</h3>
+                <p class="text-gray-600">
+                    About 70% of diagnostic processes are manual, with automation limited to urban private hospitals, increasing the burden on healthcare professionals.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 transform hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-file-medical text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Physical File Dependency</h3>
+                <p class="text-gray-600">
+                    Many patients carry physical files, with 60% of facilities using paper records; losing files risks losing medical history, disrupting care continuity.
+                </p>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">The Cost of Inefficiency</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <canvas id="timeLossChart"></canvas>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h4 class="text-xl font-semibold mb-4">Healthcare Inefficiencies</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>Doctors spend 30-50% of their time on paperwork rather than patient care</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>20-30% of diagnostic tests are repeated due to lost results or inaccessible records</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>Manual record-keeping leads to a 10-20% error rate in patient information</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>Rural patients travel 3+ hours on average to access care and records</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-6">An Opportunity for Transformation</h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                With over 67 crore Ayushman Bharat Health Accounts and 42 crore linked records, digital solutions like ABDM offer a chance to revolutionize healthcare delivery in India.
+            </p>
+            
+            <a href="/solution" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition-all">
+                Explore Our Solution <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Time Loss Chart
+        const timeLossCtx = document.getElementById('timeLossChart').getContext('2d');
+        const timeLossChart = new Chart(timeLossCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Patient Care',
+                    'Documentation',
+                    'Finding Records',
+                    'Repeat Tests',
+                    'Administrative Tasks'
+                ],
+                datasets: [{
+                    data: [45, 25, 15, 5, 10],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(255, 159, 64, 0.7)',
+                        'rgba(255, 205, 86, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 205, 86)',
+                        'rgb(153, 102, 255)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'How Doctors Currently Spend Their Time',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

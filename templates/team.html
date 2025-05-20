@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block title %}Our Team{% endblock %}
+
+{% block content %}
+<section class="section bg-gradient-to-br from-indigo-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-indigo-600 font-semibold">The Founders</span>
+            <h1 class="text-4xl font-bold mt-2 mb-6">Our Team</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Meet the passionate technologists and healthcare innovators building T3Care AI to transform healthcare delivery across India.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-indigo-100 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-indigo-400 text-9xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Rakesh</h3>
+                    <p class="text-indigo-600 font-medium mb-4">AI & Technology Lead</p>
+                    <p class="text-gray-600 mb-4">
+                        B.Sc. in Computer Science & Cloud Computing, skilled in Python, TensorFlow, OpenCV, MediaPipe, Firebase, and Web Development, Deeplearning.
+                    </p>
+                    <h4 class="font-semibold text-lg mb-2">Key Expertise</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>AI & Machine Learning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Healthcare Technology Solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Computer Vision & Recognition Systems</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-blue-100 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-blue-400 text-9xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Vivek Mishra</h3>
+                    <p class="text-blue-600 font-medium mb-4">AI & Data Science Lead</p>
+                    <p class="text-gray-600 mb-4">
+                        B.Sc. in Computer Science & Cloud Computing, skilled in Python, TensorFlow, PyTorch, Flask, Three.js, and Web Development.
+                    </p>
+                    <h4 class="font-semibold text-lg mb-2">Key Expertise</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Deep Learning & Neural Networks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Data Analysis & Medical Data Modeling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Algorithm Development & Optimization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-purple-100 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-purple-400 text-9xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Nikhil</h3>
+                    <p class="text-purple-600 font-medium mb-4">Product & Development Lead</p>
+                    <p class="text-gray-600 mb-4">
+                        B.Sc. in Computer Science & Cloud Computing, skilled in React.js, Next.js, Flutter, Node.js, Firebase, and API Development.
+                    </p>
+                    <h4 class="font-semibold text-lg mb-2">Key Expertise</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Full Stack Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Mobile & Web Application Architecture</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>User Experience & Interface Design</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">Notable Projects</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="border border-indigo-200 rounded-lg p-5">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sign-language text-indigo-600"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Sign Language Converter</h4>
+                    <p class="text-gray-600 text-sm">Real-time gesture-to-speech system for breaking communication barriers.</p>
+                </div>
+                
+                <div class="border border-blue-200 rounded-lg p-5">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-blue-600"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">YouTube Gesture Controller</h4>
+                    <p class="text-gray-600 text-sm">Control YouTube with hand gestures for seamless interaction.</p>
+                </div>
+                
+                <div class="border border-green-200 rounded-lg p-5">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-id-card text-green-600"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Face Recognition Voting</h4>
+                    <p class="text-gray-600 text-sm">Secure online voting with facial authentication and verification.</p>
+                </div>
+                
+                <div class="border border-red-200 rounded-lg p-5">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-ambulance text-red-600"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Emergency Quick Service</h4>
+                    <p class="text-gray-600 text-sm">Fast-response system for emergency medical needs and AI-based triage.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex justify-center mb-16">
+            <a href="/closing" class="px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 transition-all mx-2">
+                Join Our Team <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="/competition" class="px-8 py-3 border border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-all mx-2">
+                <i class="fas fa-arrow-left mr-2"></i> View Competition
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

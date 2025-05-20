@@ -1,0 +1,188 @@
+{% extends "index.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="section bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+                    <span class="gradient-text">T3Care AI</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Empowering Indian Healthcare with AI-Powered Patient Management</h2>
+                <p class="text-lg text-gray-600 mb-8">Revolutionizing healthcare delivery across urban and rural India with intelligent, accessible and affordable digital solutions.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/problem" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-all">Explore the Problem</a>
+                    <a href="/solution" class="px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all">Our Solution</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full filter blur-3xl opacity-20"></div>
+                    <img src="/static/images/hero.svg" alt="T3Care AI Platform" class="relative z-10">
+                </div>
+                <div class="text-center mt-6">
+                    <div class="flex justify-center space-x-6">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-blue-600">1.4B+</p>
+                            <p class="text-sm text-gray-600">Population</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-blue-600">₹250Cr</p>
+                            <p class="text-sm text-gray-600">at 1% Market</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-blue-600">193K+</p>
+                            <p class="text-sm text-gray-600">Healthcare Facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Transforming Healthcare with AI</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                T3Care AI bridges critical gaps in India's healthcare system with intelligent, accessible solutions for all stakeholders.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl">
+                <div class="text-blue-600 mb-4">
+                    <i class="fas fa-user-md text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">For Doctors</h3>
+                <p class="text-gray-600">AI-powered diagnostics support, patient history summarization, and medication suggestions to enhance clinical decision-making.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl">
+                <div class="text-green-600 mb-4">
+                    <i class="fas fa-hospital text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">For Hospitals</h3>
+                <p class="text-gray-600">Streamlined patient management, role-based access control, and enhanced operational efficiency across urban and rural facilities.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl">
+                <div class="text-purple-600 mb-4">
+                    <i class="fas fa-user text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">For Patients</h3>
+                <p class="text-gray-600">Digital access to medical records, prescriptions, and visit history, with support for multiple Indian languages for inclusive healthcare.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">The T3Care AI Advantage</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Urban-Rural Synergy</h3>
+                <p class="text-gray-600 mb-4">Our platform seamlessly bridges the gap between advanced urban hospitals and resource-constrained rural clinics with adaptable solutions.</p>
+                <div class="h-60 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <canvas id="urbanRuralChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold mb-4">AI-Driven Healthcare</h3>
+                <p class="text-gray-600 mb-4">Leveraging cutting-edge AI to transform diagnosis, treatment, and patient management across India's diverse healthcare landscape.</p>
+                <div class="h-60 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <canvas id="aiAdoptionChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Transform Healthcare?</h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">Join us in revolutionizing India's healthcare ecosystem with AI-powered solutions that empower doctors, hospitals, and patients.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/closing" class="px-8 py-3 bg-white text-blue-600 font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-all">Partner With Us</a>
+            <a href="/market" class="px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-blue-700 transition-all">Learn More</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Urban-Rural Distribution Chart
+        const urbanRuralCtx = document.getElementById('urbanRuralChart').getContext('2d');
+        const urbanRuralChart = new Chart(urbanRuralCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Rural (63%)', 'Urban (37%)'],
+                datasets: [{
+                    data: [63, 37],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Population Distribution'
+                    }
+                }
+            }
+        });
+        
+        // AI Adoption Chart
+        const aiAdoptionCtx = document.getElementById('aiAdoptionChart').getContext('2d');
+        const aiAdoptionChart = new Chart(aiAdoptionCtx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'AI Adoption in Healthcare (%)',
+                    data: [15, 22, 35, 48, 65, 78],
+                    fill: true,
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

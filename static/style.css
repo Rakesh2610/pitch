@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #1a73e8;
+    --primary-dark: #0d47a1;
+    --primary-light: #83b9ff;
+    --secondary-color: #4caf50;
+    --accent-color: #ff5722;
+    --text-color: #333;
+    --light-text: #666;
+    --white: #ffffff;
+    --light-bg: #f5f9ff;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(135deg, #1a73e8, #0d47a1);
+    --gradient-accent: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Landing Page Styles */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo h1 .highlight {
+    color: var(--accent-color);
+}
+
+.tagline h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: var(--light-text);
+    max-width: 800px;
+}
+
+.cta-button {
+    margin-top: 2rem;
+}
+
+.start-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--gradient);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.start-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(26, 115, 232, 0.3);
+}
+
+/* Slide Styles */
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem 0;
+}
+
+.slide-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.slide-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.slide-header h1::after {
+    content: '';
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    bottom: 0;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 3px;
+}
+
+.slide-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Intro Slide */
+.intro-slide {
+    text-align: center;
+    max-width: 800px;
+}
+
+.logo-large {
+    margin-bottom: 2rem;
+}
+
+.logo-large img {
+    max-width: 200px;
+    height: auto;
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.intro-slide h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.tagline p {
+    font-size: 1.3rem;
+    color: var(--light-text);
+}
+
+/* Problem Statement Slide */
+.problem-slide {
+    width: 100%;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.card p {
+    color: var(--light-text);
+}
+
+/* Solution Slide */
+.solution-slide {
+    width: 100%;
+}
+
+.solution-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solution-item {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.solution-item:hover {
+    transform: translateX(5px);
+}
+
+.solution-icon {
+    margin-right: 1.5rem;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.solution-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.solution-details p {
+    color: var(--light-text);
+}
+
+/* Market Slide */
+.market-slide {
+    width: 100%;
+}
+
+.market-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.market-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-item {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    color: var(--light-text);
+}
+
+.market-graph {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.market-graph img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Business Model Slide */
+.business-model-slide {
+    width: 100%;
+}
+
+.business-model-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.model-item {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.model-item:hover {
+    transform: translateY(-5px);
+}
+
+.model-item i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.model-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.model-item p {
+    color: var(--light-text);
+}
+
+/* Revenue Model Slide */
+.revenue-model-slide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.revenue-streams {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.revenue-item {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.revenue-item:hover {
+    transform: scale(1.05);
+}
+
+.revenue-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.revenue-item .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.revenue-projection {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.projection-chart h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+}
+
+.bar {
+    width: 60px;
+    background: var(--gradient);
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    transition: height 1s ease-in-out;
+}
+
+.bar span {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: var(--light-text);
+    white-space: nowrap;
+}
+
+/* Competitive Landscape Slide */
+.competitive-landscape-slide {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.competitive-landscape-slide h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+}
+
+.competitive-matrix {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.matrix-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 400px;
+    position: relative;
+}
+
+.matrix-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.matrix-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.matrix-quadrant {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.matrix-quadrant h4 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.competitor {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.competitor.t3care {
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(26, 115, 232, 0.3);
+}
+
+/* USP Slide */
+.usp-slide {
+    width: 100%;
+}
+
+.usp-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.usp-item {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.usp-item:hover {
+    transform: translateY(-5px);
+}
+
+.usp-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.usp-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.usp-item p {
+    color: var(--light-text);
+}
+
+/* Team Slide */
+.team-slide {
+    width: 100%;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--primary-light);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.member-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* CTA Slide */
+.cta-slide {
+    width: 100%;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.metric .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.metric .label {
+    color: var(--light-text);
+}
+
+.investment-details {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.investment-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+}
+
+/* Navigation */
+.slide-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-btn {
+    padding: 0.7rem 1.5rem;
+    background: var(--gradient);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(26, 115, 232, 0.3);
+}
+
+.slide-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(26, 115, 232, 0.3);
+    transition: background 0.3s;
+}
+
+.indicator.active {
+    background: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide-header h1 {
+        font-size: 2rem;
+    }
+    
+    .grid-layout,
+    .business-model-container,
+    .revenue-streams,
+    .usp-container,
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .solution-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .solution-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .metrics {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

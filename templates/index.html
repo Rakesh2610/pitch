@@ -1,0 +1,424 @@
+{% extends 'base.html' %}
+{% block title %}AI-Powered Healthcare for India{% endblock %}
+
+{% block content %}
+<section class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">Revolutionizing Healthcare in India</span>
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                    <span class="gradient-text">T3Care AI</span>
+                </h1>
+                <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-gray-800">Empowering Indian Healthcare with AI-Powered Patient Management</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">Connecting 1.4 billion Indians to better healthcare with intelligent solutions for doctors, hospitals, and patients across urban and rural areas.</p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="{{ url_for('problem') }}" class="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-all">Start Presentation</a>
+                    <a href="{{ url_for('solution') }}" class="px-8 py-4 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all">Explore Solution</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl filter blur-3xl opacity-20"></div>
+                <div class="relative bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                        <div class="w-full h-64 bg-indigo-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-laptop-medical text-indigo-500 text-7xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">AI-Powered Healthcare Platform</h3>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <p class="text-3xl font-bold text-blue-600">1.4B+</p>
+                            <p class="text-sm text-gray-600">Population</p>
+                        </div>
+                        <div class="text-center p-4 bg-indigo-50 rounded-lg">
+                            <p class="text-3xl font-bold text-indigo-600">₹250Cr</p>
+                            <p class="text-sm text-gray-600">Potential ARR (1% Market)</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-lg">
+                            <p class="text-3xl font-bold text-purple-600">65%</p>
+                            <p class="text-sm text-gray-600">Rural Population</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <p class="text-3xl font-bold text-green-600">195K+</p>
+                            <p class="text-sm text-gray-600">Healthcare Facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">The Problem</span>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Critical Challenges in Indian Healthcare</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                India's healthcare system faces unique challenges that require innovative solutions tailored to its diverse population and geography.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl border-t-4 border-red-500">
+                <div class="text-red-500 mb-4">
+                    <i class="fas fa-file-medical-alt text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Inaccessible Medical Records</h3>
+                <p class="text-gray-600">Most hospitals use software only for admin work, while patients have no access to their medical records or history.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl border-t-4 border-orange-500">
+                <div class="text-orange-500 mb-4">
+                    <i class="fas fa-robot text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">No AI Support</h3>
+                <p class="text-gray-600">Zero AI assistance for reading, summarizing, or understanding documents, lab tests, or scan reports.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl border-t-4 border-yellow-500">
+                <div class="text-yellow-500 mb-4">
+                    <i class="fas fa-clock text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Time-Consuming Revisits</h3>
+                <p class="text-gray-600">When patients return after weeks, doctors must manually re-read old records, wasting valuable consultation time.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl border-t-4 border-green-500">
+                <div class="text-green-500 mb-4">
+                    <i class="fas fa-user-md text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Lack of Decision Support</h3>
+                <p class="text-gray-600">Junior and training doctors lack adequate decision support during diagnosis and prescription.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl border-t-4 border-blue-500">
+                <div class="text-blue-500 mb-4">
+                    <i class="fas fa-microscope text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Manual Analysis</h3>
+                <p class="text-gray-600">No automation in analyzing reports—everything must be interpreted manually by healthcare providers.</p>
+            </div>
+            
+            <div class="card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl border-t-4 border-purple-500">
+                <div class="text-purple-500 mb-4">
+                    <i class="fas fa-folder-open text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Physical Record Risks</h3>
+                <p class="text-gray-600">Many still carry physical files, and losing one means losing medical history entirely.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="inline-block bg-indigo-100 text-indigo-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Our Solution</span>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">T3Care AI Platform</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our comprehensive AI-powered platform addresses the critical challenges in Indian healthcare with innovative, accessible solutions.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-bl-full z-0"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-6">Intelligent Medical Management</h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">AI-powered report summarization</h4>
+                                <p class="text-gray-600">For lab tests, scans, and prescriptions</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Patient history auto-summary</h4>
+                                <p class="text-gray-600">Showing past visits, diagnoses, and treatments</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Medication suggestions</h4>
+                                <p class="text-gray-600">For junior doctors based on symptoms, diagnosis and past visits</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full z-0"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-6">Access & Accessibility</h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Digital access</h4>
+                                <p class="text-gray-600">For patients to view their own records and prescriptions</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Role-based login system</h4>
+                                <p class="text-gray-600">For doctors, admins, and hospitals</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Multi-language support</h4>
+                                <p class="text-gray-600">Supporting multiple Indian languages for easy use across regions</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex justify-center">
+            <a href="{{ url_for('solution') }}" class="px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 transition-all">
+                Explore Full Solution <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Massive Market Opportunity</h2>
+                <p class="text-xl mb-8">India represents one of the world's largest healthcare markets, with unique challenges and opportunities.</p>
+                
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <p class="text-4xl font-bold mb-2">1.4B+</p>
+                        <p>People across rural (65%) and urban (35%) areas</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <p class="text-4xl font-bold mb-2">195K+</p>
+                        <p>Healthcare facilities nationwide</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <p class="text-4xl font-bold mb-2">1.2M+</p>
+                        <p>Doctors seeking innovative tools</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <p class="text-4xl font-bold mb-2">₹250Cr</p>
+                        <p>Annual revenue at just 1% market share</p>
+                    </div>
+                </div>
+                
+                <a href="{{ url_for('market') }}" class="inline-block px-8 py-3 bg-white text-blue-600 font-medium rounded-lg shadow hover:bg-gray-100 transition-all">
+                    Market Details <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">India's Rural-Urban Healthcare Split</h3>
+                    <canvas id="marketChart" height="300"></canvas>
+                </div>
+                <div class="mt-6 bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Projected Market Growth</h3>
+                    <canvas id="growthChart" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">Our Team</span>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-6">Meet the Innovators</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+            Our team combines expertise in AI, healthcare technology, and product development to create transformative solutions.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+                <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-indigo-400 text-7xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-1">Rakesh</h3>
+                    <p class="text-indigo-600 font-medium mb-3">AI & Technology Lead</p>
+                    <p class="text-gray-600 text-sm mb-4">B.Sc. in Computer Science & Cloud Computing. Expert in AI, Python, TensorFlow & Healthcare Solutions.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+                <div class="h-48 bg-blue-100 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-blue-400 text-7xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-1">Vivek Mishra</h3>
+                    <p class="text-blue-600 font-medium mb-3">AI & Data Science Lead</p>
+                    <p class="text-gray-600 text-sm mb-4">B.Sc. in Computer Science & Cloud Computing. Skilled in Neural Networks, PyTorch & Medical Data Modeling.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+                <div class="h-48 bg-purple-100 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-purple-400 text-7xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-1">Nikhil</h3>
+                    <p class="text-purple-600 font-medium mb-3">Product & Development Lead</p>
+                    <p class="text-gray-600 text-sm mb-4">B.Sc. in Computer Science & Cloud Computing. Expert in Full-Stack Development, Mobile Apps & UX Design.</p>
+                </div>
+            </div>
+        </div>
+        
+        <a href="{{ url_for('team') }}" class="px-8 py-3 border border-purple-600 text-purple-600 font-medium rounded-lg hover:bg-purple-50 transition-all">
+            Meet Our Full Team <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</section>
+
+<section class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-8">Ready to Transform Healthcare in India?</h2>
+        <p class="text-xl mb-12 max-w-3xl mx-auto">Join us in revolutionizing India's healthcare ecosystem with AI-powered solutions that empower doctors, hospitals, and patients.</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="{{ url_for('problem') }}" class="px-10 py-4 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-all">
+                Start the Presentation <i class="fas fa-play-circle ml-2"></i>
+            </a>
+            <a href="{{ url_for('closing') }}" class="px-10 py-4 border border-white text-white font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-all">
+                Contact for Partnership <i class="fas fa-handshake ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Market Chart - Rural vs Urban
+        const marketCtx = document.getElementById('marketChart');
+        if (marketCtx) {
+            const marketChart = new Chart(marketCtx.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Rural Population (65%)', 'Urban Population (35%)'],
+                    datasets: [{
+                        data: [65, 35],
+                        backgroundColor: [
+                            'rgba(79, 70, 229, 0.8)',
+                            'rgba(59, 130, 246, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 255, 255, 1)',
+                            'rgba(255, 255, 255, 1)'
+                        ],
+                        borderWidth: 2,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    cutout: '65%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#1F2937',
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const value = context.raw;
+                                    const total = context.dataset.data.reduce((acc, data) => acc + data, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${context.label}: ${percentage}% (${(value / 100 * 1.4).toFixed(1)}B people)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Growth Projection Chart
+        const growthCtx = document.getElementById('growthChart');
+        if (growthCtx) {
+            const growthChart = new Chart(growthCtx.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
+                    datasets: [{
+                        label: 'Digital Health Market (₹ Billion)',
+                        data: [370, 450, 550, 670, 820, 1000],
+                        backgroundColor: 'rgba(79, 70, 229, 0.2)',
+                        borderColor: 'rgba(79, 70, 229, 1)',
+                        borderWidth: 3,
+                        tension: 0.3,
+                        fill: true,
+                        pointBackgroundColor: 'rgba(79, 70, 229, 1)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                color: '#1F2937',
+                                callback: function(value) {
+                                    return '₹ ' + value;
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#1F2937'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `₹ ${context.parsed.y} Billion`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

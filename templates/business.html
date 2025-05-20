@@ -1,0 +1,325 @@
+{% extends "base.html" %}
+{% block title %}Business Model{% endblock %}
+
+{% block content %}
+<section class="section bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-blue-600 font-semibold">Business Strategy</span>
+            <h1 class="text-4xl font-bold mt-2 mb-6">Our Business Model</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                T3Care AI's comprehensive approach to monetization balances sustainable growth with healthcare accessibility across India's diverse landscape.
+            </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">User Registration Model</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-blue-200 rounded-lg p-6 relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center absolute -top-8 left-1/2 transform -translate-x-1/2">
+                        <i class="fas fa-user-md text-blue-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 mt-4 text-center">Individual Doctors</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Register through web app</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Admin approval required</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Full feature access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Tablet/device preferred</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="border border-purple-200 rounded-lg p-6 relative">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center absolute -top-8 left-1/2 transform -translate-x-1/2">
+                        <i class="fas fa-hospital text-purple-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 mt-4 text-center">Hospitals/Clinics</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Register as institutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Admin assigns accounts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Create multiple doctors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Shared central database</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="border border-green-200 rounded-lg p-6 relative">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center absolute -top-8 left-1/2 transform -translate-x-1/2">
+                        <i class="fas fa-users text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 mt-4 text-center">Patients</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>View access to records</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Upload test results</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Access prescriptions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Manage appointments</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">Revenue Model</h3>
+                
+                <div class="mb-8">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="border border-blue-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-lg mb-2 text-blue-600">Monthly Subscription</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Flexibility for new users</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Lower initial commitment</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-green-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-lg mb-2 text-green-600">Annual Subscription</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Discounted rates</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Premium features included</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-center">Pricing Strategy</h3>
+                
+                <div class="space-y-6">
+                    <div class="text-center">
+                        <h4 class="text-xl font-semibold mb-3">Area-Based Pricing</h4>
+                        <p class="text-base text-gray-600 max-w-2xl mx-auto">
+                            Our area-based pricing model promotes accessibility across India's diverse regions, with adjusted rates that reflect local economic conditions.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6 max-w-md mx-auto">
+                        <!-- Rural Areas Card -->
+                        <div class="bg-green-50 rounded-lg p-6 border border-green-100 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-leaf text-green-500 mr-3 text-xl"></i>
+                                <h5 class="text-xl font-semibold text-green-600">Rural Areas</h5>
+                            </div>
+                            <p class="text-base text-gray-600 mb-4">Reduced prices to ensure accessibility</p>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="bg-white rounded-lg p-4 text-center">
+                                    <span class="text-base text-gray-500 block mb-1">Monthly</span>
+                                    <span class="font-bold text-green-600 text-2xl">₹999</span>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center">
+                                    <span class="text-base text-gray-500 block mb-1">Annual</span>
+                                    <span class="font-bold text-green-600 text-2xl">₹9,999</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Urban Regions Card -->
+                        <div class="bg-blue-50 rounded-lg p-6 border border-blue-100 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-building text-blue-500 mr-3 text-xl"></i>
+                                <h5 class="text-xl font-semibold text-blue-600">Urban Regions</h5>
+                            </div>
+                            <p class="text-base text-gray-600 mb-4">Standard pricing for urban settings</p>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="bg-white rounded-lg p-4 text-center">
+                                    <span class="text-base text-gray-500 block mb-1">Monthly</span>
+                                    <span class="font-bold text-blue-600 text-2xl">₹1,999</span>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center">
+                                    <span class="text-base text-gray-500 block mb-1">Annual</span>
+                                    <span class="font-bold text-blue-600 text-2xl">₹19,999</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <h4 class="text-xl font-semibold mb-3">Healthcare Equity</h4>
+                        <p class="text-base text-gray-600 max-w-2xl mx-auto">
+                            Our pricing strategy aims to bridge the healthcare gap between rural and urban areas through affordable digital solutions, making quality care accessible to all.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">Projected Revenue Growth</h3>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <canvas id="growthChart"></canvas>
+                </div>
+                
+                <div class="flex flex-col justify-center">
+                    <h4 class="text-xl font-semibold mb-4">5-Year Projection Highlights</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                            <span>Year 1: Market penetration focusing on early adopters in urban centers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                            <span>Year 2-3: Rapid expansion into tier 2 cities and rural areas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                            <span>Year 4-5: Scaling nationwide with comprehensive feature enhancement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                            <span>Targeting 0.5% market share by Year 3, growing to 2% by Year 5</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="/competition" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition-all">
+                View Competitive Landscape <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Individual Doctors', 'Small Clinics', 'Hospitals', 'Enterprise Solutions'],
+                datasets: [{
+                    data: [35, 25, 30, 10],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgb(54, 162, 235)',
+                        'rgb(75, 192, 192)',
+                        'rgb(153, 102, 255)',
+                        'rgb(255, 159, 64)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Revenue Distribution by Customer Segment',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Growth Chart
+        const growthCtx = document.getElementById('growthChart').getContext('2d');
+        const growthChart = new Chart(growthCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+                datasets: [{
+                    label: 'Annual Revenue (₹ Crore)',
+                    data: [10, 40, 90, 160, 250],
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '₹ Crore'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '5-Year Revenue Projection',
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

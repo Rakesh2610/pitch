@@ -1,0 +1,335 @@
+{% extends "base.html" %}
+{% block title %}Competitive Landscape{% endblock %}
+
+{% block content %}
+<section class="section bg-gradient-to-br from-purple-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-purple-600 font-semibold">Market Analysis</span>
+            <h1 class="text-4xl font-bold mt-2 mb-6">Competitive Landscape</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                T3Care AI, aligned with the Ayushman Bharat Digital Mission, addresses critical gaps in India’s healthcare technology market, offering advanced AI and rural-urban scalability overlooked by current players.
+            </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">Indian Market Competitors</h3>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Competitor</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Revenue (FY24)</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Market Share</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Key Focus</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Limitations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">Practo</td>
+                            <td class="py-3 px-4 border-b">₹250-300 Cr ($30-36M)</td>
+                            <td class="py-3 px-4 border-b">0.34%</td>
+                            <td class="py-3 px-4 border-b">Urban-focused EHR, telehealth, mental health</td>
+                            <td class="py-3 px-4 border-b">Limited rural scalability and advanced AI</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">HealthPlix</td>
+                            <td class="py-3 px-4 border-b">₹120-160 Cr ($14-19M)</td>
+                            <td class="py-3 px-4 border-b">0.19%</td>
+                            <td class="py-3 px-4 border-b">AI-assisted EMR for clinics</td>
+                            <td class="py-3 px-4 border-b">Limited rural reach and hospital scalability</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">DocEngage</td>
+                            <td class="py-3 px-4 border-b">₹40-60 Cr ($5-7M)</td>
+                            <td class="py-3 px-4 border-b">0.07%</td>
+                            <td class="py-3 px-4 border-b">Basic EHR/CRM</td>
+                            <td class="py-3 px-4 border-b">Minimal AI and rural presence</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">Lybrate</td>
+                            <td class="py-3 px-4 border-b">₹50-70 Cr ($6-8M)</td>
+                            <td class="py-3 px-4 border-b">0.08%</td>
+                            <td class="py-3 px-4 border-b">Teleconsultation platform</td>
+                            <td class="py-3 px-4 border-b">Weak AI and rural accessibility</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">Tata 1mg</td>
+                            <td class="py-3 px-4 border-b">₹1000-1200 Cr ($120-143M)</td>
+                            <td class="py-3 px-4 border-b">1.5%</td>
+                            <td class="py-3 px-4 border-b">E-pharmacy, teleconsultation, EHR</td>
+                            <td class="py-3 px-4 border-b">Limited AI analytics and rural penetration</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">Global Leaders</h3>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Competitor</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Revenue (2024)</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Focus</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Market Share</th>
+                            <th class="py-3 px-4 bg-gray-100 font-semibold text-gray-700 border-b">Limitation for India</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">Epic Systems</td>
+                            <td class="py-3 px-4 border-b">$4.2B</td>
+                            <td class="py-3 px-4 border-b">Comprehensive EHR for large hospitals</td>
+                            <td class="py-3 px-4 border-b">Significant in U.S.; minimal in India</td>
+                            <td class="py-3 px-4 border-b">High cost and not tailored for India's rural needs</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">Oracle Health (Cerner)</td>
+                            <td class="py-3 px-4 border-b">$5.8B</td>
+                            <td class="py-3 px-4 border-b">EHR and AI-driven health IT solutions</td>
+                            <td class="py-3 px-4 border-b">Strong in developed markets; limited in India</td>
+                            <td class="py-3 px-4 border-b">Not optimized for Indian healthcare workflow</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">Siemens Healthineers</td>
+                            <td class="py-3 px-4 border-b">€21.7B (~$23B)</td>
+                            <td class="py-3 px-4 border-b">Imaging, diagnostics, and digital health</td>
+                            <td class="py-3 px-4 border-b">Global presence; limited rural India focus</td>
+                            <td class="py-3 px-4 border-b">High cost and complex implementation</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b font-medium">GE Healthcare</td>
+                            <td class="py-3 px-4 border-b">$19.6B</td>
+                            <td class="py-3 px-4 border-b">Medical equipment and diagnostic solutions</td>
+                            <td class="py-3 px-4 border-b">Strong in equipment; limited in software</td>
+                            <td class="py-3 px-4 border-b">Primarily focused on high-end imaging solutions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">Unique Selling Proposition</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <canvas id="competitivePositioningChart"></canvas>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-5">
+                    <h4 class="text-xl font-semibold mb-3 text-blue-800">T3Care AI Advantages</h4>
+                    <ul class="grid gap-3">
+                        <li class="flex items-center bg-white rounded-lg p-3 shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-lg mr-3"></i>
+                            <div>
+                                <span class="font-medium text-gray-800">AI-Powered Analysis</span>
+                                <p class="text-sm text-gray-600 mt-1">Advanced report summarization and patient data analytics</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center bg-white rounded-lg p-3 shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-lg mr-3"></i>
+                            <div>
+                                <span class="font-medium text-gray-800">Role-Based Access</span>
+                                <p class="text-sm text-gray-600 mt-1">Tailored access for hospitals, doctors, and patients</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center bg-white rounded-lg p-3 shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-lg mr-3"></i>
+                            <div>
+                                <span class="font-medium text-gray-800">Rural-Urban Flexibility</span>
+                                <p class="text-sm text-gray-600 mt-1">Scalable for solo practitioners and large hospitals</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center bg-white rounded-lg p-3 shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-lg mr-3"></i>
+                            <div>
+                                <span class="font-medium text-gray-800">India-Specific Design</span>
+                                <p class="text-sm text-gray-600 mt-1">Built for India's healthcare and infrastructure challenges</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center bg-white rounded-lg p-3 shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-lg mr-3"></i>
+                            <div>
+                                <span class="font-medium text-gray-800">Multilingual Support</span>
+                                <p class="text-sm text-gray-600 mt-1">Accessible across India's diverse linguistic regions</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- T3Care Market Fit Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4 text-purple-800">Current Market Gap</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Most hospital software focuses on billing and admin, leaving doctors and patients with limited access to detailed records and AI-driven insights.
+                </p>
+                <div class="mt-4">
+                    <canvas id="marketGapChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4 text-purple-800">T3Care Market Fit</h3>
+                <div class="grid gap-3">
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center">
+                        <i class="fas fa-arrow-circle-right text-blue-500 text-lg mr-3"></i>
+                        <p class="text-gray-700">Empowers doctors with AI tools and full data access</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center">
+                        <i class="fas fa-arrow-circle-right text-blue-500 text-lg mr-3"></i>
+                        <p class="text-gray-700">Provides patients transparency and control over health data</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center">
+                        <i class="fas fa-arrow-circle-right text-blue-500 text-lg mr-3"></i>
+                        <p class="text-gray-700">Addresses India's rural-urban healthcare needs</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center">
+                        <i class="fas fa-arrow-circle-right text-blue-500 text-lg mr-3"></i>
+                        <p class="text-gray-700">Ensures compliance with healthcare data regulations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="/team" class="px-8 py-3 bg-purple-600 text-white font-medium rounded-lg shadow hover:bg-purple-700 transition-all">
+                Meet Our Team <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Competitive Positioning Chart
+        const competitivePositioningCtx = document.getElementById('competitivePositioningChart').getContext('2d');
+        const competitivePositioningChart = new Chart(competitivePositioningCtx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'AI Integration',
+                    'Rural Accessibility',
+                    'Affordability',
+                    'Patient Access',
+                    'Multilingual Support',
+                    'Scalability'
+                ],
+                datasets: [
+                    {
+                        label: 'T3Care AI',
+                        data: [90, 85, 80, 90, 85, 90],
+                        fill: true,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        pointBackgroundColor: 'rgb(54, 162, 235)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(54, 162, 235)'
+                    },
+                    {
+                        label: 'Average Competitor',
+                        data: [35, 25, 50, 40, 20, 60],
+                        fill: true,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        pointBackgroundColor: 'rgb(255, 99, 132)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(255, 99, 132)'
+                    }
+                ]
+            },
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Competitive Positioning Analysis',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+        
+        // Market Gap Chart
+        const marketGapCtx = document.getElementById('marketGapChart').getContext('2d');
+        const marketGapChart = new Chart(marketGapCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Admin Focus', 'Patient Access', 'AI Support', 'Rural Reach', 'Affordability'],
+                datasets: [
+                    {
+                        label: 'Current Market Solutions',
+                        data: [85, 35, 20, 25, 40],
+                        backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'T3Care AI',
+                        data: [85, 90, 85, 85, 80],
+                        backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Score (0-100)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Market Gap Analysis',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}
